@@ -1,0 +1,19 @@
+{
+  default_flags: ig
+  verbs:
+  [
+    {
+      key: tab
+      cmd: ":toggle_stage;:next_match"
+    }
+    {
+      invocation: pright
+      internal: panel_right_no_open
+    }
+    {
+      key: enter
+      cmd: ":pright;:print_path"
+      leave_broot: true
+    }
+  ]
+}

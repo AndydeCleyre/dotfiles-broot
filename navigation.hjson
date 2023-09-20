@@ -1,0 +1,40 @@
+{
+  verbs:
+  [
+    {
+      invocation: cd
+      external: noglob cd {directory}
+      from_shell: true
+    }
+    {
+      invocation: mkcd {new_dir}
+      cmd: ":mkdir {new_dir};:focus {new_dir}"
+    }
+    {
+      key: alt-up
+      internal: ":up_tree"
+    }
+    {
+      key: alt-left
+      internal: ":back"
+    }
+    {
+      key: alt-down
+      invocation: go
+      internal: ":focus"
+    }
+    {
+      invocation: go {path}
+      internal: ":focus {path}"
+    }
+    {
+      shortcut: ~
+      internal: ":focus ~"
+    }
+    {
+      invocation: clip
+      internal: ":copy_path"
+      leave_broot: false
+    }
+  ]
+}

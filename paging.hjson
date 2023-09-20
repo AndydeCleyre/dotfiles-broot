@@ -1,0 +1,28 @@
+{
+  verbs:
+  [
+    {
+      key: home
+      internal: ":select_first"
+    }
+    {
+      key: end
+      internal: ":select_last"
+    }
+    {
+      invocation: less
+      external: less -+F {file}
+      leave_broot: false
+    }
+    {
+      invocation: lh
+      external: zsh -ic "lh {file}"
+      leave_broot: false
+    }
+    {
+      invocation: lhs {syntax}
+      external: zsh -ic "lh {file} -s {syntax}"
+      leave_broot: false
+    }
+  ]
+}

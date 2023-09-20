@@ -1,0 +1,33 @@
+{
+  verbs:
+  [
+    {
+      invocation: touch {new_file}
+      external: touch {directory}/{new_file}
+      leave_broot: false
+    }
+    {
+      shortcut: e
+      external: $EDITOR {file}
+      leave_broot: false
+    }
+    {
+      shortcut: eg
+      invocation: subl
+      external: subl {file}
+      leave_broot: false
+    }
+    {
+      invocation: write {subpath}
+      external: $EDITOR {directory}/{subpath}
+      leave_broot: false
+    }
+    {
+      key: ctrl-b
+      invocation: backup {version}
+      external: cp -r {file} {parent}/{file-stem}-{version}{file-dot-extension}
+      leave_broot: false
+      auto_exec: false
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  verbs:
+  [
+    {
+      invocation: meld
+      external: git difftool -y {file}
+      leave_broot: false
+    }
+    {
+      shortcut: gd
+      external: zsh -ic "git diff {file} | lh -s diff"
+      set_working_dir: true
+      leave_broot: false
+    }
+  ]
+}

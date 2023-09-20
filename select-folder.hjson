@@ -1,0 +1,18 @@
+{
+  default_flags: igf
+  verbs:
+  [
+    {
+      key: enter
+      internal: ":print_path"
+      apply_to: directory
+      leave_broot: true
+    }
+    {
+      key: enter
+      cmd: ":focus;:print_path"
+      apply_to: file
+      leave_broot: true
+    }
+  ]
+}
