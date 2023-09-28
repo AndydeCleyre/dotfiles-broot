@@ -11,6 +11,11 @@
       cmd: ":mkdir {new_dir};:focus {new_dir}"
     }
     {
+      invocation: rmdir
+      external: rmdir {directory}
+      leave_broot: false
+    }
+    {
       key: alt-up
       internal: ":up_tree"
     }
