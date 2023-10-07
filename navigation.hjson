@@ -41,5 +41,9 @@
       internal: ":copy_path"
       leave_broot: false
     }
+    {
+      key: ctrl-f
+      cmd: ":files"
+    }
   ]
 }
