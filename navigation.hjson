@@ -42,7 +42,7 @@
       leave_broot: false
     }
     {
-      key: ctrl-f
+      key: alt-f
       cmd: ":files"
     }
   ]
