@@ -1,5 +1,17 @@
 {
-  default_flags: igf
+  # default_flags: igf
+
+  # -- Note --
+  # default_flags would just be overridden by conf.hjson,
+  # so these are meant to be used by any shell functions using select-folder.hjson:
+  #   --git-ignored --show-git-info --only-folders
+  #
+  # For example:
+  #   cd "$(
+  #     <$TTY broot --color yes --git-ignored --show-git-info --only-folders \
+  #     --conf "${XDG_CONFIG_HOME:-${HOME}/.config}/broot/select-folder.hjson;${XDG_CONFIG_HOME:-${HOME}/.config}/broot/conf.hjson"
+  #   )"
+
   verbs:
   [
     {
