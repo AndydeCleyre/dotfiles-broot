@@ -22,7 +22,7 @@
     }
     {
       key: enter
-      cmd: ":focus;:print_path"
+      cmd: ":parent;:print_path"
       apply_to: file
       leave_broot: true
     }
