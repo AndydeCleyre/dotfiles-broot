@@ -8,13 +8,10 @@
     }
     {
       shortcut: gd
-      external: zsh -ic "git diff {file} | lh -s diff"
+      external: zsh -c ". ~/.config/zsh/paging_and_printing.zsh; git diff {file} | lh -s diff"
       set_working_dir: true
       leave_broot: false
-      # Depends: lh
-      # TODO:
-      #   - tidy and isolate highlighting zsh funcs
-      #   - source only that (don't pass -i)
+      # Depends: lh (paging_and_printing.zsh)
     }
   ]
 }
