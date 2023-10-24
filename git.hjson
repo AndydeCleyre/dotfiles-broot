@@ -12,6 +12,7 @@
       set_working_dir: true
       leave_broot: false
       # Depends: lh (paging_and_printing.zsh)
+      # https://github.com/AndydeCleyre/dotfiles-zsh/blob/main/paging_and_printing.zsh
     }
   ]
 }
