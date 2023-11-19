@@ -6,6 +6,10 @@
       internal: ":toggle_second_tree"
     }
     {
+      key: ctrl-g
+      cmd: ":toggle_stage;:next_match"
+    }
+    {
       key: f4
       shortcut: z
       external: tmux splitw
