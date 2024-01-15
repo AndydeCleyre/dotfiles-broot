@@ -1,32 +1,30 @@
-{
-  verbs:
-  [
-    {
-      key: home
-      internal: ":select_first"
-    }
-    {
-      key: end
-      internal: ":select_last"
-    }
-    {
-      invocation: less
-      external: less -+F {file}
-      leave_broot: false
-    }
-    {
-      invocation: lh
-      external: zsh -c ". ~/.config/zsh/paging_and_printing.zsh; lh {file}"
-      leave_broot: false
-      # Depends: lh (paging_and_printing.zsh)
-      # https://github.com/AndydeCleyre/dotfiles-zsh/blob/main/paging_and_printing.zsh
-    }
-    {
-      invocation: lhs {syntax}
-      external: zsh -c ". ~/.config/zsh/paging_and_printing.zsh; lh {file} -s {syntax}"
-      leave_broot: false
-      # Depends: lh (paging_and_printing.zsh)
-      # https://github.com/AndydeCleyre/dotfiles-zsh/blob/main/paging_and_printing.zsh
-    }
-  ]
-}
+verbs:
+[
+  {
+    key: home
+    internal: ":select_first"
+  }
+  {
+    key: end
+    internal: ":select_last"
+  }
+  {
+    invocation: less
+    external: less -+F {file}
+    leave_broot: false
+  }
+  {
+    invocation: lh
+    external: zsh -c ". ~/.config/zsh/paging_and_printing.zsh; lh {file}"
+    leave_broot: false
+    # Depends: lh (paging_and_printing.zsh)
+    # https://github.com/AndydeCleyre/dotfiles-zsh/blob/main/paging_and_printing.zsh
+  }
+  {
+    invocation: lhs {syntax}
+    external: zsh -c ". ~/.config/zsh/paging_and_printing.zsh; lh {file} -s {syntax}"
+    leave_broot: false
+    # Depends: lh (paging_and_printing.zsh)
+    # https://github.com/AndydeCleyre/dotfiles-zsh/blob/main/paging_and_printing.zsh
+  }
+]

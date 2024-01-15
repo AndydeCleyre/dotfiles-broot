@@ -1,32 +1,43 @@
 # Used by: https://github.com/AndydeCleyre/dotfiles-zsh/blob/main/broot.zsh
 
-{
-  # default_flags: igf
+# default_flags: --git-ignored --show-git-info --sizes --only-folders
 
-  # -- Note --
-  # default_flags would just be overridden by conf.hjson,
-  # so these are meant to be used by any shell functions using select-folder.hjson:
-  #   --git-ignored --show-git-info --only-folders
-  #
-  # For example:
-  #   cd "$(
-  #     <$TTY broot --color yes --git-ignored --show-git-info --only-folders \
-  #     --conf "${XDG_CONFIG_HOME:-${HOME}/.config}/broot/select-folder.hjson;${XDG_CONFIG_HOME:-${HOME}/.config}/broot/conf.hjson"
-  #   )"
+# -- Note --
+# default_flags would just be overridden by conf.hjson,
+# so the above flags are meant to be used by any shell functions using select-folder.hjson
+#
+# For example:
+#   cd "$(
+#     <$TTY broot --color yes --git-ignored --show-git-info --only-folders \
+#     --conf "${XDG_CONFIG_HOME:-${HOME}/.config}/broot/select-folder.hjson;${XDG_CONFIG_HOME:-${HOME}/.config}/broot/conf.hjson"
+#   )"
 
-  verbs:
-  [
-    {
-      key: enter
-      internal: ":print_path"
-      apply_to: directory
-      leave_broot: true
-    }
-    {
-      key: enter
-      cmd: ":parent;:print_path"
-      apply_to: file
-      leave_broot: true
-    }
-  ]
-}
+verbs:
+[
+  {
+    key: enter
+    internal: ":print_path"
+    apply_to: directory
+    leave_broot: true
+  }
+  {
+    key: enter
+    cmd: ":parent;:print_path"
+    apply_to: file
+    leave_broot: true
+  }
+  {
+    key: alt-enter
+    invocation: cd
+    internal: ":print_path"
+    apply_to: directory
+    leave_broot: true
+  }
+  {
+    key: alt-enter
+    invocation: cd
+    cmd: ":parent;:print_path"
+    apply_to: file
+    leave_broot: true
+  }
+]

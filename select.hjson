@@ -1,33 +1,30 @@
 # Used by: https://github.com/AndydeCleyre/dotfiles-zsh/blob/main/broot.zsh
 
-{
-  # default_flags: igS
+# default_flags: --git-ignored --show-git-info --no-sizes
 
-  # -- Note --
-  # default_flags would just be overridden by conf.hjson,
-  # so these are meant to be used by any shell functions using select-folder.hjson:
-  #   --git-ignored --show-git-info --no-sizes
-  #
-  # For example:
-  #   du -h "$(
-  #     <$TTY broot --color yes --git-ignored --show-git-info --no-sizes \
-  #     --conf "${XDG_CONFIG_HOME:-${HOME}/.config}/broot/select.hjson;${XDG_CONFIG_HOME:-${HOME}/.config}/broot/conf.hjson"
-  #   )"
+# -- Note --
+# default_flags would just be overridden by conf.hjson,
+# so the above flags are meant to be used by any shell functions using select-folder.hjson
+#
+# For example:
+#   du -h "$(
+#     <$TTY broot --color yes --git-ignored --show-git-info --no-sizes \
+#     --conf "${XDG_CONFIG_HOME:-${HOME}/.config}/broot/select.hjson;${XDG_CONFIG_HOME:-${HOME}/.config}/broot/conf.hjson"
+#   )"
 
-  verbs:
-  [
-    {
-      key: tab
-      cmd: ":toggle_stage;:next_match"
-    }
-    {
-      invocation: pright
-      internal: panel_right_no_open
-    }
-    {
-      key: enter
-      cmd: ":pright;:print_path"
-      leave_broot: true
-    }
-  ]
-}
+verbs:
+[
+  {
+    key: tab
+    cmd: ":toggle_stage;:next_match"
+  }
+  {
+    invocation: pright
+    internal: panel_right_no_open
+  }
+  {
+    key: enter
+    cmd: ":pright;:print_path"
+    leave_broot: true
+  }
+]

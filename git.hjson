@@ -1,18 +1,16 @@
-{
-  verbs:
-  [
-    {
-      invocation: meld
-      external: git difftool -y {file}
-      leave_broot: false
-    }
-    {
-      shortcut: gd
-      external: zsh -c ". ~/.config/zsh/paging_and_printing.zsh; git diff {file} | lh -s diff"
-      set_working_dir: true
-      leave_broot: false
-      # Depends: lh (paging_and_printing.zsh)
-      # https://github.com/AndydeCleyre/dotfiles-zsh/blob/main/paging_and_printing.zsh
-    }
-  ]
-}
+verbs:
+[
+  {
+    invocation: meld
+    external: git difftool -y {file}
+    leave_broot: false
+  }
+  {
+    shortcut: gd
+    external: zsh -c ". ~/.config/zsh/paging_and_printing.zsh; git diff {file} | lh -s diff"
+    set_working_dir: true
+    leave_broot: false
+    # Depends: lh (paging_and_printing.zsh)
+    # https://github.com/AndydeCleyre/dotfiles-zsh/blob/main/paging_and_printing.zsh
+  }
+]

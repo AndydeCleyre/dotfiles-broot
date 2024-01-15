@@ -1,27 +1,11 @@
-{
-  verbs:
-  [
-    {
-      key: f3
-      internal: ":toggle_second_tree"
-    }
-    {
-      key: ctrl-g
-      cmd: ":toggle_stage;:next_match"
-    }
-    {
-      key: f4
-      shortcut: z
-      external: tmux splitw
-      set_working_dir: true
-      leave_broot: false
-    }
-    {
-      key: ctrl-t
-      shortcut: tab
-      external: tmux new-window -c {directory}
-      set_working_dir: true
-      leave_broot: false
-    }
-  ]
-}
+verbs:
+[
+  {
+    key: f3
+    internal: ":toggle_second_tree"
+  }
+  {
+    key: ctrl-g
+    cmd: ":toggle_stage;:next_match"
+  }
+]

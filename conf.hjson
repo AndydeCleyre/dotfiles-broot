@@ -2,29 +2,15 @@
 # - https://dystroy.org/broot/conf_file
 # - https://hjson.github.io
 
-{
-  # -- Do show: gitignored files, git info, file sizes --
-  default_flags: igs
-  verbs: [
-    {
-      # https://github.com/Canop/broot/issues/530
-      key: enter
-      external: xdg-open {file}
-      apply_to: file
-      leave_broot: false
-    }
-    {
-      invocation: dolphin
-      external: dolphin {directory}
-      leave_broot: false
-    }
-  ]
-  imports: [
-    theme.hjson
-    navigation.hjson
-    panes.hjson
-    editing.hjson
-    paging.hjson
-    git.hjson
-  ]
-}
+# -- Do show: gitignored files, git info, file sizes --
+default_flags: --git-ignored --show-git-info --sizes
+
+imports:
+[
+  theme.hjson
+  navigation.hjson
+  panes.hjson
+  editing.hjson
+  paging.hjson
+  git.hjson
+]

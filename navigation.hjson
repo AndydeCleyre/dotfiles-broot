@@ -1,49 +1,61 @@
-{
-  verbs:
-  [
-    {
-      invocation: cd
-      external: noglob cd {directory}
-      from_shell: true
-    }
-    {
-      invocation: mkcd {new_dir}
-      cmd: ":mkdir {new_dir};:focus {new_dir}"
-    }
-    {
-      invocation: rmdir
-      external: rmdir {directory}
-      leave_broot: false
-    }
-    {
-      key: alt-up
-      internal: ":up_tree"
-    }
-    {
-      key: alt-left
-      internal: ":back"
-    }
-    {
-      key: alt-down
-      invocation: go
-      internal: ":focus"
-    }
-    {
-      invocation: go {path}
-      internal: ":focus {path}"
-    }
-    {
-      shortcut: ~
-      internal: ":focus ~"
-    }
-    {
-      invocation: clip
-      internal: ":copy_path"
-      leave_broot: false
-    }
-    {
-      key: alt-f
-      cmd: ":files"
-    }
-  ]
-}
+verbs:
+[
+  {
+    # https://github.com/Canop/broot/issues/595
+    key: alt-enter
+    invocation: cd
+    external: noglob cd {directory}
+    from_shell: true
+  }
+  {
+    # https://github.com/Canop/broot/issues/530
+    key: enter
+    external: xdg-open {file}
+    apply_to: file
+    leave_broot: false
+  }
+  {
+    key: alt-f
+    internal: ":toggle_files"
+  }
+  {
+    invocation: mkcd {new_dir}
+    cmd: ":mkdir {new_dir};:focus {new_dir}"
+  }
+  {
+    invocation: rmdir
+    external: rmdir {directory}
+    leave_broot: false
+  }
+  {
+    key: alt-up
+    internal: ":up_tree"
+  }
+  {
+    key: alt-left
+    internal: ":back"
+  }
+  {
+    key: alt-down
+    invocation: go
+    internal: ":focus"
+  }
+  {
+    invocation: go {path}
+    internal: ":focus {path}"
+  }
+  {
+    shortcut: ~
+    internal: ":focus ~"
+  }
+  {
+    invocation: clip
+    internal: ":copy_path"
+    leave_broot: false
+  }
+  {
+    invocation: dolphin
+    external: dolphin {directory}
+    leave_broot: false
+  }
+]
