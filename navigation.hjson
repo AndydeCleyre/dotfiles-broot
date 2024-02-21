@@ -1,11 +1,9 @@
 verbs:
 [
   {
-    # https://github.com/Canop/broot/issues/595
     key: alt-enter
     invocation: cd
-    external: noglob cd {directory}
-    from_shell: true
+    cmd: ":write_output {directory};:quit"
   }
   {
     # https://github.com/Canop/broot/issues/530
