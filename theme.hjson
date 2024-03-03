@@ -1,6 +1,6 @@
 # https://dystroy.org/broot/skins
 
-icon_theme: vscode
+icon_theme: nerdfont
 show_selection_mark: true
 syntax_theme: MochaDark
 true_colors: true
