@@ -21,6 +21,10 @@ verbs:
     internal: ":toggle_hidden"
   }
   {
+    key: alt-g
+    internal: ":toggle_git_ignore"
+  }
+  {
     key: alt-s
     internal: ":toggle_sizes"
   }
