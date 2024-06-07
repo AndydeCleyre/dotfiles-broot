@@ -51,6 +51,7 @@ verbs:
     internal: ":focus {path}"
   }
   {
+    key: ctrl-h
     shortcut: ~
     internal: ":focus ~"
   }
