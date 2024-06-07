@@ -65,6 +65,11 @@ verbs:
     leave_broot: false
   }
   {
+    invocation: drag
+    external: ripdrag --resizable --icon-size 256 --basename --content-width 500 {file}
+    leave_broot: false
+  }
+  {
     invocation: dolphin
     external: dolphin {directory}
     leave_broot: false
