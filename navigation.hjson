@@ -38,6 +38,10 @@ verbs:
     leave_broot: false
   }
   {
+    invocation: rm
+    cmd: ":focus_staging_area_no_open;:trash {file}"
+  }
+  {
     key: alt-up
     internal: ":up_tree"
   }
@@ -65,6 +69,7 @@ verbs:
     leave_broot: false
   }
   {
+    # TODO: switch to blobdrop when my Qt is new enough?
     invocation: drag
     external: ripdrag --resizable --icon-size 256 --basename --content-width 500 {file}
     leave_broot: false
