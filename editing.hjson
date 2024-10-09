@@ -13,8 +13,8 @@ verbs:
   }
   {
     shortcut: eg
-    invocation: subl
-    external: subl {file}
+    invocation: zed
+    external: zed {file}
     leave_broot: false
   }
   {
