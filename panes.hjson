@@ -5,6 +5,10 @@ verbs:
     internal: ":toggle_second_tree"
   }
   {
+    key: alt-2
+    internal: ":toggle_second_tree"
+  }
+  {
     key: ctrl-g
     cmd: ":toggle_stage;:next_match"
   }
