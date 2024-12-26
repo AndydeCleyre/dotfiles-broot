@@ -1,6 +1,14 @@
 verbs:
 [
   {
+    key: left
+    internal: back
+  }
+  {
+    key: right
+    internal: open_stay
+  }
+  {
     key: alt-enter
     invocation: cd
     cmd: ":write_output {directory};:quit"
