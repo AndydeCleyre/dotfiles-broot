@@ -45,9 +45,18 @@ verbs:
     external: rmdir {directory}
     leave_broot: false
   }
+  # {
+  #   invocation: rm
+  #   cmd: ":focus_staging_area_no_open;:trash {file}"
+  # }
+  {
+    invocation: trashcli {file}
+    external: trash {file}
+    leave_broot: false
+  }
   {
     invocation: rm
-    cmd: ":focus_staging_area_no_open;:trash {file}"
+    cmd: ":focus_staging_area_no_open;:trashcli {file}"
   }
   {
     key: alt-up
