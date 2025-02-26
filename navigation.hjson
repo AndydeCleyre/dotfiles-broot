@@ -81,6 +81,12 @@ verbs:
     internal: ":focus ~"
   }
   {
+    # key: ctrl-~
+    # for some reason ctrl-~ is received as ctrl-6
+    key: ctrl-6
+    internal: ":focus ~"
+  }
+  {
     invocation: clip
     internal: ":copy_path"
     leave_broot: false
