@@ -10,21 +10,25 @@ verbs:
   }
   {
     invocation: less
-    external: less -+F {file}
+    # external: less -+F {file}
+    external: tmux popup -w 100% -h 100% -E "less -+F {file}"
+    # Depends: tmux
     leave_broot: false
   }
   {
     invocation: lh
-    external: zsh -c ". ~/.config/zsh/paging_and_printing.zsh; lh {file}"
+    # external: zsh -c ". ~/.config/zsh/paging_and_printing.zsh; lh {file}"
+    external: tmux popup -w 100% -h 100% -E "zsh -c '. ~/.config/zsh/paging_and_printing.zsh; lh {file}'"
     leave_broot: false
-    # Depends: lh (paging_and_printing.zsh)
-    # https://github.com/AndydeCleyre/dotfiles-zsh/blob/main/paging_and_printing.zsh
+    # Depends: tmux, lh (paging_and_printing.zsh):
+    #   https://github.com/AndydeCleyre/dotfiles-zsh/blob/main/paging_and_printing.zsh
   }
   {
     invocation: lhs {syntax}
-    external: zsh -c ". ~/.config/zsh/paging_and_printing.zsh; lh {file} -s {syntax}"
+    # external: zsh -c ". ~/.config/zsh/paging_and_printing.zsh; lh {file} -s {syntax}"
+    external: tmux popup -w 100% -h 100% -E "zsh -c '. ~/.config/zsh/paging_and_printing.zsh; lh {file} -s {syntax}'"
     leave_broot: false
-    # Depends: lh (paging_and_printing.zsh)
-    # https://github.com/AndydeCleyre/dotfiles-zsh/blob/main/paging_and_printing.zsh
+    # Depends: tmux, lh (paging_and_printing.zsh):
+    #   https://github.com/AndydeCleyre/dotfiles-zsh/blob/main/paging_and_printing.zsh
   }
 ]
