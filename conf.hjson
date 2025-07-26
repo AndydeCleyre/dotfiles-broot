@@ -4,7 +4,7 @@
 
 # -- Do show: gitignored files, git info, file sizes --
 default_flags: --git-ignored --show-git-info --sizes
-date_time_format: "%y-%m-%e"
+date_time_format: "%y-%m-%d"
 imports:
 [
   theme.hjson
