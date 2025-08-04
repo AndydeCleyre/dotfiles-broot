@@ -13,3 +13,6 @@ verbs:
     cmd: ":toggle_stage;:next_match"
   }
 ]
+
+lines_before_match_in_preview: 3
+lines_after_match_in_preview: 3
