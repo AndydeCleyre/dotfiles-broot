@@ -2,11 +2,11 @@ verbs:
 [
   {
     key: f3
-    internal: ":toggle_second_tree"
+    internal: toggle_second_tree
   }
   {
     key: alt-2
-    internal: ":toggle_second_tree"
+    internal: toggle_second_tree
   }
   {
     key: ctrl-g

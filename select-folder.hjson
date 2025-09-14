@@ -6,17 +6,27 @@
 # default_flags would just be overridden by conf.hjson,
 # so the above flags are meant to be used by any shell functions using select-folder.hjson
 #
-# For example:
-#   cd "$(
-#     <$TTY broot --color yes --git-ignored --show-git-info --only-folders \
-#     --conf "${XDG_CONFIG_HOME:-${HOME}/.config}/broot/select-folder.hjson;${XDG_CONFIG_HOME:-${HOME}/.config}/broot/conf.hjson"
-#   )"
+# For example (Zsh):
+#
+#   broot-print-folder () {  # [broot-arg...]
+#     emulate -L zsh
+#     broot \
+#       --conf "${XDG_CONFIG_HOME:-${HOME}/.config}/broot/select-folder.hjson;${XDG_CONFIG_HOME:-${HOME}/.config}/broot/conf.hjson" \
+#       --color yes \
+#       --git-ignored \
+#       --show-git-info \
+#       --only-folders \
+#       $@
+#   }
+#
+#   cd "$(<$TTY broot-print-folder)"
+
 
 verbs:
 [
   {
     key: enter
-    internal: ":print_path"
+    internal: print_path
     apply_to: directory
   }
   {
@@ -27,7 +37,7 @@ verbs:
   {
     key: alt-enter
     invocation: cd
-    internal: ":print_path"
+    internal: print_path
     apply_to: directory
   }
   {

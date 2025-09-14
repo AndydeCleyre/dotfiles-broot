@@ -22,19 +22,19 @@ verbs:
   }
   {
     key: alt-f
-    internal: ":toggle_files"
+    internal: toggle_files
   }
   {
     key: alt-.
-    internal: ":toggle_hidden"
+    internal: toggle_hidden
   }
   {
     key: alt-g
-    internal: ":toggle_git_ignore"
+    internal: toggle_git_ignore
   }
   {
     key: alt-s
-    internal: ":toggle_sizes"
+    internal: toggle_sizes
   }
   {
     invocation: mkcd {new_dir}
@@ -45,10 +45,6 @@ verbs:
     external: rmdir {directory}
     leave_broot: false
   }
-  # {
-  #   invocation: rm
-  #   cmd: ":focus_staging_area_no_open;:trash {file}"
-  # }
   {
     invocation: trashcli {file}
     external: trash {file}
@@ -60,35 +56,35 @@ verbs:
   }
   {
     key: alt-up
-    internal: ":up_tree"
+    internal: up_tree
   }
   {
     key: alt-left
-    internal: ":back"
+    internal: back
   }
   {
     key: alt-down
     invocation: go
-    internal: ":focus"
+    internal: focus
   }
   {
     invocation: go {path}
-    internal: ":focus {path}"
+    internal: focus {path}
   }
   {
     key: ctrl-h
     shortcut: ~
-    internal: ":focus ~"
+    internal: focus ~
   }
   {
     # key: ctrl-~
     # for some reason ctrl-~ is received as ctrl-6
     key: ctrl-6
-    internal: ":focus ~"
+    internal: focus ~
   }
   {
     invocation: clip
-    internal: ":copy_path"
+    internal: copy_path
     leave_broot: false
   }
   {

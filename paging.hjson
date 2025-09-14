@@ -2,11 +2,11 @@ verbs:
 [
   {
     key: home
-    internal: ":select_first"
+    internal: select_first
   }
   {
     key: end
-    internal: ":select_last"
+    internal: select_last
   }
   {
     invocation: less
