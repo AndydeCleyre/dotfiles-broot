@@ -85,7 +85,7 @@ verbs:
   {
     invocation: jump (?P<pathsearch>.*)?
     shorcut: j
-    external: tmux popup -e BROOT_SERVER_NAME={server-name} -e BROOT_JUMP_SEARCH={pathsearch} -E "ZDOTDIR=~/.config/broot/zdotdir-zshz zsh -i"
+    external: [ "sh" "-c" "tmux popup -e BROOT_SERVER_NAME={server-name} -e BROOT_JUMP_SEARCH={pathsearch} -E 'ZDOTDIR=~/.config/broot/zdotdir-zshz zsh -i' &" ]
     leave_broot: false
   }
   {
